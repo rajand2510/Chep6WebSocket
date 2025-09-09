@@ -15,7 +15,7 @@ app.use(express.json());
 
 // MongoDB connection
 mongoose
-  .connect('mongodb+srv://roomcraft:7FaU2sQurB3Sevdh@roomcraft.gps0ygv.mongodb.net/chat', {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
